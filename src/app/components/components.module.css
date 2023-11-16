@@ -1,0 +1,10 @@
+.Header{
+    align-items: center;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.HeaderNav a{
+    color: black; 
+    margin: 20px;
+}
