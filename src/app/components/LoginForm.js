@@ -1,18 +1,18 @@
 import styles from './components.module.css';
 
-const LoginForm = () =>{
+const LoginForm = ({loginUser}) =>{
     return(
         <div>
             <h2>Login Form</h2>
-            <form className={styles.Form}>
+            <form className={styles.Form} onSubmit={(e)=> loginUser(e) }>
 
-                <label htmlForm="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input type="email" name="email" />
 
-                <label htmlForm="pass">Password</label>
-                <input type="password" name="pass" />
+                <label htmlFor="password">Password</label>
+                <input type="password" name="password" />
                 
-                <button type = "submit">Create User</button>
+                <button type = "submit">Login</button>
             </form>
         </div>
     );

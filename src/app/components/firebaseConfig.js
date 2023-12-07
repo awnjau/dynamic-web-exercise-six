@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: `${process.env.FIREBASE_API_KEY}`,
+    apiKey: "AIzaSyCF0X7rHXbZPD6tXqBL-EJD5mpDb8i-qdY",
     authDomain: "dynamic-web-exercise-six-8365a.firebaseapp.com",
     projectId: "dynamic-web-exercise-six-8365a",
     storageBucket: "dynamic-web-exercise-six-8365a.appspot.com",

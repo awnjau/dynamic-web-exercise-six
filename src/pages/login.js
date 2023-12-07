@@ -1,14 +1,22 @@
-import Header from "@/app/components/Header";
-import LoginForm from "@/app/components/LoginForm";
+import { useEffect } from "react"; 
+import { useRouter } from "next/navigation"; 
+import LoginForm from "@/app/components/LoginForm"
 
-export default function Login(){
-    return(
+export default function Login( { isLoggedIn, loginUser } ) {
+    const router = useRouter(); 
+
+    useEffect(() => {
+        if (isLoggedIn) router.push("/"); 
+    }, [isLoggedIn]); 
+
+
+
+    return (
         <>
-        <Header />
         <main>
             <h1>Login</h1>
-            <LoginForm />
+            <LoginForm loginUser={loginUser} /> 
         </main>
         </>
-    );
-}
+    )
+} 
