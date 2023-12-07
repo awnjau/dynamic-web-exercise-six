@@ -1,9 +1,9 @@
-import {useEffect, useState } from 'react';
-import {useRouter} from "next/router";
+import { useEffect} from 'react';
+import { useRouter } from "next/router";
 import UserProfileCard from '@/app/components/UserProfileCard';
 
 
-export default function userProfile({ isLoggedIn, userInformation}){ 
+export default function UserProfile({ isLoggedIn, userInformation}){ 
    const router=useRouter();
 
     useEffect(() => {

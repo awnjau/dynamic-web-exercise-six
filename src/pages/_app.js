@@ -22,6 +22,7 @@ export default function MyApp( { Component, pageProps }) {
         const email = e.currentTarget.email.value;
         const password = e.currentTarget.password.value;
         const auth = getAuth();
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential)=>{
                 const user = userCredential.user;
@@ -84,16 +85,13 @@ export default function MyApp( { Component, pageProps }) {
             const auth = getAuth(); 
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-
                     setUserInformation(user); 
                     setIsLoggedIn(true); 
                 } else {
                     setUserInformation(null); 
                     setIsLoggedIn(false); 
                 }
-
                 setIsLoading(false); 
-
             }); 
         }
 
